@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['PL', 'Podrido', 'Maduro', 'SM', 'Verde']
+
+roboflow:
+  workspace: universidad-de-antioquia-ke77o
+  project: fruit-jcfo8
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/universidad-de-antioquia-ke77o/fruit-jcfo8/dataset/2

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/jdoso/Desktop/Yolov8/runs/mlflow/386623390962322669/201de1f689214977ab2fced29bd8dcf4/artifacts
+end_time: 1729570789998
+entry_point_name: ''
+experiment_id: '386623390962322669'
+lifecycle_stage: active
+run_id: 201de1f689214977ab2fced29bd8dcf4
+run_name: train13
+run_uuid: 201de1f689214977ab2fced29bd8dcf4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729569319238
+status: 3
+tags: []
+user_id: jdoso

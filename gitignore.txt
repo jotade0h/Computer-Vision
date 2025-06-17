@@ -1,0 +1,33 @@
+# Archivos grandes de video y modelos
+*.mp4
+*.avi
+*.mov
+*.pt
+*.npy
+*.pkl
+
+# Bandas satelitales y datos remotos
+*.jp2
+*.tif
+*.tiff
+*.hdf
+*.nc
+*.zip
+*.tar
+*.rar
+*.7z
+
+# Datos temporales o de ejecución
+runs/
+__pycache__/
+*.log
+*.tmp
+*.bak
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas pesadas específicas
+runs/
+ultralytics-main/
