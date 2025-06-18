@@ -1,0 +1,38 @@
+# Archivos grandes de video y modelos
+*.mp4
+*.avi
+*.mov
+*.pt
+*.npy
+*.pkl
+*.MP4
+
+# Bandas satelitales y datos remotos
+*.jp2
+*.tif
+*.tiff
+*.hdf
+*.nc
+*.zip
+*.tar
+*.rar
+*.7z
+
+# Datos temporales o de ejecución
+runs/
+__pycache__/
+*.log
+*.tmp
+*.bak
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+Fruits.mp4
+Fruits_run0.mp4
+
+# Ignorar carpetas pesadas específicas
+runs/
+ultralytics-main/
+
+venice-remote-sensing-ndvi-2017-2025/data/results/*
