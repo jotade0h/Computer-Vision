@@ -34,5 +34,14 @@ Fruits_run0.mp4
 # Ignorar carpetas pesadas específicas
 runs/
 ultralytics-main/
+yolov8env/
 
 venice-remote-sensing-ndvi-2017-2025/data/results/*
+
+.idea/
+.vscode/
+Data\env/
+
+
+# ⚠️ Pero no ignores este archivo específico
+!Ejercicios\Trenes\object_counting_output.mp4
