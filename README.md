@@ -1,137 +1,132 @@
 ---
 
-## 🚆 Detección de Infraestructura y Elementos en Vías Férreas
+## 🚆 Infrastructure and Trackside Object Detection using YOLOv8
 
-El ejercicio ubicado en [`Ejercicios/Trenes`](./Ejercicios/Trenes) implementa un sistema avanzado de visión por computador basado en **YOLOv8** para la **detección y análisis de elementos críticos** en el entorno de vías férreas y carreteras.
+The exercise located in [`Exercises/Trains`](./Exercises/Trains) presents an advanced computer vision system based on **YOLOv8**, designed for the detection and analysis of critical elements surrounding railway tracks and roadways.
 
-### 🎯 Objetivo
+### 🎯 Objective
 
-Detectar, clasificar y **localizar automáticamente** elementos relevantes como vegetación, señales de tránsito, postes y basura. El sistema genera alertas al identificar objetos dentro de **zonas de prohibición** o áreas restringidas definidas por el usuario. Este enfoque permite facilitar:
+Automatically detect, classify, and **locate relevant objects** such as vegetation, traffic signs, utility poles, and litter. The system raises alerts when any of these objects are detected within **predefined exclusion zones** or critical areas. This functionality enables:
 
-- Mantenimiento preventivo (poda, limpieza)
-- Verificación de infraestructura (señales, postes)
-- Reportes automatizados de condiciones anómalas
-
----
-
-### 🧠 Clases detectadas
-
-- 🌿 **Vegetación invasiva**
-- 🚯 **Basura o residuos sólidos**
-- ⚠️ **Señales de tránsito**
-- 🪵 **Postes (eléctricos o de señalización)**
+- Preventive maintenance (e.g., pruning, debris removal)
+- Infrastructure verification (e.g., presence of signs and poles)
+- Automated reporting of anomalies for decision support
 
 ---
 
-### 🚨 Lógica de advertencia por zona
+### 🧠 Detected Classes
 
-El sistema permite definir un área crítica o zona de advertencia dentro de cada imagen. Si uno o más objetos aparecen dentro de esta zona, se genera una advertencia visual y puede activarse un proceso de registro de incidencia.
-
-🗺️ Estas incidencias pueden ser asociadas a coordenadas o posiciones relativas, para su **almacenamiento, análisis posterior o envío a sistemas de gestión operativa** (cuadrillas de mantenimiento, bases de datos, dashboards, etc.).
-
----
-
-### 🧪 Técnicas utilizadas
-
-- Entrenamiento de modelo YOLOv8 con dataset personalizado.
-- Definición dinámica de **zonas de exclusión o advertencia**.
-- Registro automatizado de objetos detectados en zonas críticas.
-- Posible integración con backend o sistema de notificación.
-  
-
+- 🌿 **Overgrown vegetation**
+- 🚯 **Litter or solid waste**
+- ⚠️ **Traffic signage**
+- 🪵 **Utility or support poles**
 
 ---
 
-## 🌴 Visión Computacional para Clasificación de Fruta de Palma Africana
+### 🚨 Zone-Based Warning Logic
 
-El ejercicio ubicado en [`Ejercicios/Frutadepalma`](./Ejercicios/Frutadepalma) implementa un sistema de inspección visual automática para fruta de palma africana (*Elaeis guineensis*) utilizando algoritmos de visión por computador y detección en tiempo real con **YOLOv8**.
+A dynamic exclusion zone can be defined in each frame. If any object is detected within this region, a warning is triggered, and the incident can be recorded.
 
-### 🎯 Objetivo
-
-Automatizar el proceso de evaluación de calidad de los frutos en una **banda transportadora industrial**, clasificando en tiempo real distintos estados de maduración y condiciones visibles del fruto.
-
-### 🔍 Categorías detectadas
-
-El modelo fue entrenado para identificar las siguientes clases:
-
-- 🟢 **Fruta verde**
-- 🟠 **Fruta madura**
-- 🔴 **Fruta sobremadura**
-- ⚫ **Fruta podrida**
-- 🧵 **Fruta con pedúnculo largo**
-
-### 🧪 Detalles técnicos
-
-- 📹 Imágenes extraídas desde video industrial real de la línea de producción.
-- 🧾 Anotaciones realizadas manualmente usando herramientas como Roboflow.
-- 🤖 Entrenamiento con [YOLOv8](https://github.com/ultralytics/ultralytics) en formato YOLOv5-compatible.
-- 📦 Carpeta incluye modelos, scripts de inferencia, y sets de imágenes anotadas.
+🗺️ Detected incidents may be linked to spatial coordinates or relative positions for **reporting, analysis, or dispatching of operational response teams** (e.g., for cleanup, pruning, or repairs).
 
 ---
 
-## 🧪 Ejercicios de visión por computador
+### 🧪 Technical Highlights
 
-Dentro de la carpeta [`Ejercicios/`](./Ejercicios/) se encuentran desarrolladas tres soluciones prácticas aplicadas a problemas reales de visión por computador. Cada punto está documentado en el archivo `Soluciones.pdf`, acompañado por sus respectivas carpetas de implementación:
-
----
-
-### 🔷 Punto 1: Inspección de fugas de gas con cámaras OGI
-
-Se aborda la inspección de gases invisibles al ojo humano mediante imágenes obtenidas por una cámara OGI (Optical Gas Imaging).  
-El objetivo es **estimar el volumen de gas perdido** (propano) en cada imagen, comparando imágenes con fuga visible frente a imágenes sin fuga.
-
-📁 Carpeta: `Ejercicios/Punto_1`  
-🧠 Técnicas: procesamiento de imágenes, segmentación, análisis de diferencia de píxeles.
+- YOLOv8 custom training with annotated datasets
+- Dynamic warning area definition per frame
+- Automated logging of detections within critical zones
+- Optional integration with backend systems for alerts or storage
 
 ---
 
-### 🔷 Punto 2: Inspección de galletas con o sin crema
+## 🌴 Computer Vision for Oil Palm Fruit Maturity Classification
 
-Una fábrica desea detectar si la crema ha sido aplicada correctamente en galletas tipo sándwich.  
-Se implementa un algoritmo que diferencia entre galletas con crema suficiente y bien ubicada (“Bueno”) frente a galletas sin crema o mal aplicadas (“Incorrecto”).
+The exercise located in [`Exercises/Palmfruit`](./Exercises/Palmfruit) implements an automated visual inspection system for African oil palm fruit (*Elaeis guineensis*), using real-time object detection powered by **YOLOv8**.
 
-📁 Carpeta: `Ejercicios/Punto_2`  
-📄 Contiene imágenes reales infrarrojas en carpetas “Bueno” e “Incorrecto”, así como scripts como `Punto_2_1.py`, `Punto_2_2.py` y `rgb.py`.
+### 🎯 Objective
 
-🧠 Técnicas: binarización, detección de contornos, área de segmentación.
+Automate quality control on an **industrial conveyor line** by classifying fruits based on ripeness and visible defects in real time.
 
----
+### 🔍 Target Classes
 
-### 🔷 Punto 3: Detección de placa y velocidad en infracción vehicular
+The model was trained to identify the following categories:
 
-Una cámara de seguridad capta una infracción cometida por un taxi.  
-Se requiere identificar la **placa del taxi** (a pesar de estar borrosa por movimiento) y calcular la **velocidad aproximada** al momento de la captura.
-
-📁 Carpeta: `Ejercicios/Punto_3`  
-🧠 Técnicas: estimación de desenfoque por movimiento, OCR (reconocimiento de caracteres), procesamiento de imágenes.
+- 🟢 **Unripe fruit**
+- 🟠 **Ripe fruit**
+- 🔴 **Overripe fruit**
+- ⚫ **Rotten fruit**
+- 🧵 **Fruit with elongated stalk (peduncle)**
 
 ---
 
-📄 Toda la documentación teórica y explicativa está disponible en [`Ejercicios/Soluciones.pdf`](./Ejercicios/Soluciones.pdf), donde se detallan los pasos, algoritmos aplicados, ejemplos visuales y estructuras de carpetas para cada ejercicio.
+### 🧪 Technical Details
 
-
----
-
-
-
-
-
-## 🎥 Ejemplo Visual
-
-<!-- Puedes reemplazar esto por una imagen real del proyecto -->
-![Ejemplo detección](docs/ejemplo_deteccion.gif)
+- 📹 Frames extracted from real industrial video footage
+- 🧾 Manual annotation using tools like Roboflow
+- 🤖 Training with [YOLOv8](https://github.com/ultralytics/ultralytics) in YOLOv5-compatible format
+- 📦 Folder contains trained models, inference scripts, and labeled datasets
 
 ---
 
-## 🧪 Características principales
+## 🧪 Computer Vision Exercises
 
-- 🔍 Detección de múltiples clases: madura, verde, sobremadura, podrida, pedúnculo largo.
-- 🚀 Modelo YOLOv8 entrenado con imágenes reales.
-- 📦 Dataset personalizado generado a partir de video industrial.
-- 🎥 Detección en tiempo real desde cámara IP.
-- ⚙️ Flujo completo desde captura hasta despliegue en producción.
+Within the [`Exercises/`](./Exercises/) directory, three practical exercises are implemented to address real-world computer vision challenges. Each problem is documented in `Soluciones.pdf` and includes a dedicated subfolder with its implementation:
 
 ---
 
-## 📁 Estructura del Repositorio
+### 🔷 Exercise 1: Gas Leak Inspection with OGI Cameras
+
+Uses Optical Gas Imaging (OGI) to analyze gas leaks that are invisible to the human eye.  
+The goal is to **quantify the volume of gas lost** (e.g., propane) by comparing images with and without visible gas presence.
+
+📁 Folder: `Exercises/Punto_1`  
+🧠 Techniques: image differencing, segmentation, pixel-wise analysis.
+
+---
+
+### 🔷 Exercise 2: Cream Detection in Sandwich Cookies
+
+A quality control system is implemented to verify whether sandwich cookies have adequate and correctly placed cream.  
+The algorithm distinguishes between **correctly filled cookies** (“Bueno”) and **defective ones** (“Incorrecto”).
+
+📁 Folder: `Exercises/Punto_2`  
+📄 Contains grayscale infrared images and Python scripts like `Punto_2_1.py`, `Punto_2_2.py`, and `rgb.py`.
+
+🧠 Techniques: binarization, contour detection, area filtering.
+
+---
+
+### 🔷 Exercise 3: Vehicle Infraction - Plate and Speed Estimation
+
+A security camera captures a taxi committing an infraction.  
+The task involves extracting the **license plate number**, despite motion blur, and estimating the **vehicle's speed** at the time of the capture.
+
+📁 Folder: `Exercises/Punto_3`  
+🧠 Techniques: motion blur estimation, OCR (Optical Character Recognition), image processing.
+
+---
+
+📄 All supporting documentation, algorithms, and implementation details are provided in [`Exercises/Soluciones.pdf`](./Exercises/Soluciones.pdf).
+
+---
+
+## 🎥 Visual Example
+
+<!-- Replace with an actual sample -->
+![Detection Example](docs/ejemplo_deteccion.gif)
+
+---
+
+## 🧪 Key Features
+
+- 🔍 Multi-class detection: ripe, unripe, overripe, rotten, peduncled fruits
+- 🚀 YOLOv8 model trained on real data
+- 📦 Custom dataset from industrial video footage
+- 🎥 Real-time inference from IP camera feed
+- ⚙️ Complete workflow: data acquisition, training, and deployment
+
+---
+
+## 📁 Repository Structure
 
