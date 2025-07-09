@@ -6,6 +6,7 @@
 *.npy
 *.pkl
 *.MP4
+*.png
 
 # Bandas satelitales y datos remotos
 *.jp2
@@ -37,6 +38,12 @@ ultralytics-main/
 yolov8env/
 
 venice-remote-sensing-ndvi-2017-2025/data/results/*
+Exercises/NDVI-Venice-remote-sensing-2017-2025/data/results/diferencia_ndvi.png
+Exercises/NDVI-Venice-remote-sensing-2017-2025/data/results/ndvi_2017.png
+Exercises/NDVI-Venice-remote-sensing-2017-2025/data/results/ndvi_2025.png
+
+
+
 
 .idea/
 .vscode/
