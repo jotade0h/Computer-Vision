@@ -1,4 +1,4 @@
-![Gas Detection Example](Data/Exercises-Images/diferencia-ndvi-2025-2017.png)
+![Gas Detection Example](Computer-Vision/Data/Exercises-Images/diferencia-ndvi-2025-2017.png)
 
 
 🚆 Infrastructure and Trackside Object Detection using YOLOv8
