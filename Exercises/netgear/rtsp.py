@@ -1,5 +1,23 @@
 import cv2
-cap = cv2.VideoCapture('rtsp://admin:william1560@192.168.128.4:554/Streaming/channels/301/')
+
+
+from dotenv import load_dotenv
+import os
+
+# 🔄 Cargar variables desde .env
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+
+
+
+# Obtener las variables
+user = os.getenv("CAMERA_USER")
+password = os.getenv("CAMERA_PASSWORD")
+url = os.getenv("CAMERA_URL")
+
+cap = cv2.VideoCapture(url) #Camaras
+
 
 while(cap.isOpened()):
     ret, frame = cap.read()
