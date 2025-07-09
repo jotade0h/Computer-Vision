@@ -1,4 +1,4 @@
-![NDVI differences](Computer-Vision/Data/Exercises-Images/diferencia-ndvi-2025-2017.png)
+![NDVI differences]([Computer-Vision/Data/Exercises-Images/diferencia-ndvi-2025-2017.png](https://github.com/jotade0h/Computer-Vision/blob/main/Data/Exercises-Images/diferencia-ndvi-2025-2017.png))
 
 
 🚆 Infrastructure and Trackside Object Detection using YOLOv8
