@@ -1,132 +1,129 @@
----
+![Gas Detection Example](Data/Exercises-Images/diferencia-ndvi-2025-2017.png)
 
-## 🚆 Infrastructure and Trackside Object Detection using YOLOv8
 
-The exercise located in [`Exercises/Trains`](./Exercises/Trains) presents an advanced computer vision system based on **YOLOv8**, designed for the detection and analysis of critical elements surrounding railway tracks and roadways.
+🚆 Infrastructure and Trackside Object Detection using YOLOv8
+The exercise located in Exercises/Trains presents an advanced computer vision system based on YOLOv8, designed for the detection and analysis of critical elements surrounding railway tracks and roadways.
 
-### 🎯 Objective
+🎯 Objective
+Automatically detect, classify, and locate relevant objects such as vegetation, traffic signs, utility poles, and litter. The system raises alerts when any of these objects are detected within predefined exclusion zones or critical areas. This functionality enables:
 
-Automatically detect, classify, and **locate relevant objects** such as vegetation, traffic signs, utility poles, and litter. The system raises alerts when any of these objects are detected within **predefined exclusion zones** or critical areas. This functionality enables:
+Preventive maintenance (e.g., pruning, debris removal)
 
-- Preventive maintenance (e.g., pruning, debris removal)
-- Infrastructure verification (e.g., presence of signs and poles)
-- Automated reporting of anomalies for decision support
+Infrastructure verification (e.g., presence of signs and poles)
 
----
+Automated reporting of anomalies for decision support
 
-### 🧠 Detected Classes
+🧠 Detected Classes
+🌿 Overgrown vegetation
 
-- 🌿 **Overgrown vegetation**
-- 🚯 **Litter or solid waste**
-- ⚠️ **Traffic signage**
-- 🪵 **Utility or support poles**
+🚯 Litter or solid waste
 
----
+⚠️ Traffic signage
 
-### 🚨 Zone-Based Warning Logic
+🪵 Utility or support poles
 
-A dynamic exclusion zone can be defined in each frame. If any object is detected within this region, a warning is triggered, and the incident can be recorded.
+🚨 Zone-Based Warning Logic
+A dynamic exclusion zone is defined in each frame. If any object is detected within this region, a warning is triggered, and the incident can be recorded.
 
-🗺️ Detected incidents may be linked to spatial coordinates or relative positions for **reporting, analysis, or dispatching of operational response teams** (e.g., for cleanup, pruning, or repairs).
+🗺️ Detected incidents can be linked to spatial coordinates or relative positions for reporting, analysis, or dispatching of operational response teams (e.g., for cleanup, pruning, or repairs).
 
----
-
-### 🧪 Technical Highlights
-
+🧪 Technical Highlights
 - YOLOv8 custom training with annotated datasets
+
 - Dynamic warning area definition per frame
+
 - Automated logging of detections within critical zones
+
 - Optional integration with backend systems for alerts or storage
 
+📁 Resources and Results
+The implementation scripts and additional processing tools can be found in the Exercises/Trains directory.
+Some of the output results, including processed images and logs, are available in Results/Trains.
+
+📹 The initial video used for detection can be accessed via a shared Google Drive link, which will be provided shortly.
+
+
+
+  
+
 ---
 
-## 🌴 Computer Vision for Oil Palm Fruit Maturity Classification
+🌴 Computer Vision for Oil Palm Fruit Maturity Classification
+The exercise located in Exercises/Palmfruit implements an automated visual inspection system for African oil palm fruit (Elaeis guineensis), using real-time object detection powered by YOLOv8.
 
-The exercise located in [`Exercises/Palmfruit`](./Exercises/Palmfruit) implements an automated visual inspection system for African oil palm fruit (*Elaeis guineensis*), using real-time object detection powered by **YOLOv8**.
+🎯 Objective
+Automate quality control on an industrial conveyor line by classifying fruits based on ripeness and visible defects in real time.
 
-### 🎯 Objective
-
-Automate quality control on an **industrial conveyor line** by classifying fruits based on ripeness and visible defects in real time.
-
-### 🔍 Target Classes
-
+🔍 Target Classes
 The model was trained to identify the following categories:
 
-- 🟢 **Unripe fruit**
-- 🟠 **Ripe fruit**
-- 🔴 **Overripe fruit**
-- ⚫ **Rotten fruit**
-- 🧵 **Fruit with elongated stalk (peduncle)**
+🟢 Unripe fruit
+
+🟠 Ripe fruit
+
+🔴 Overripe fruit
+
+⚫ Rotten fruit
+
+🧵 Fruit with elongated stalk (peduncle)
+
+🧪 Technical Details
+📹 Frames extracted from real industrial video footage
+
+🧾 Manual annotation using tools like Roboflow
+
+🤖 Training with YOLOv8 in YOLOv5-compatible format
+
+📦 Folder contains trained models, inference scripts, and labeled datasets
+
+📁 Resources and Results
+The input data, code, and training materials are located in Exercises/Palmfruit.
+
+Output results such as labeled images, metrics, and detection logs can be found in Results/Palmfruit.
+
+📹 Additional video results will be available via a Google Drive link, to be added later.
+
 
 ---
 
-### 🧪 Technical Details
+🧪 Computer Vision Exercises
+Within the Exercises/ directory, three practical exercises are implemented to address real-world computer vision challenges. Each problem is documented in Soluciones.pdf and includes its own subfolder with code and data (results are stored in the /Results/ directory).
 
-- 📹 Frames extracted from real industrial video footage
-- 🧾 Manual annotation using tools like Roboflow
-- 🤖 Training with [YOLOv8](https://github.com/ultralytics/ultralytics) in YOLOv5-compatible format
-- 📦 Folder contains trained models, inference scripts, and labeled datasets
+🔷 Exercise 1: Gas Leak Detection and Volume Estimation
+A system for detecting invisible gas leaks using Optical Gas Imaging (OGI).
+The objective is to detect the gas and quantify the volume leaked (e.g., propane) based on differences in infrared imagery.
 
----
+📁 Results located in: Results/Punto_1
+🧠 Techniques: image differencing, segmentation, pixel-wise volume estimation.
 
-## 🧪 Computer Vision Exercises
+🔷 Exercise 2: Cream Detection in Sandwich Cookies
+A visual quality control system for sandwich cookies.
+The algorithm detects whether the cookies contain adequate cream filling and classifies them as “Bueno” or “Incorrecto”.
 
-Within the [`Exercises/`](./Exercises/) directory, three practical exercises are implemented to address real-world computer vision challenges. Each problem is documented in `Soluciones.pdf` and includes a dedicated subfolder with its implementation:
+📁 Results located in: Results/Punto_2
+🧠 Techniques: grayscale analysis, thresholding, contour detection, area filtering.
 
----
+🔷 Exercise 3: Vehicle Speed and License Plate Recognition
+A traffic camera captures a vehicle during an infraction.
+The task involves estimating the vehicle’s speed and extracting the license plate despite motion blur.
 
-### 🔷 Exercise 1: Gas Leak Inspection with OGI Cameras
+📁 Results located in: Results/Punto_3
+🧠 Techniques: motion blur analysis, OCR (Optical Character Recognition), plate localization, speed estimation via frame analysis.
 
-Uses Optical Gas Imaging (OGI) to analyze gas leaks that are invisible to the human eye.  
-The goal is to **quantify the volume of gas lost** (e.g., propane) by comparing images with and without visible gas presence.
+📄 Full documentation, algorithms, and explanation of each approach can be found in Exercises/Soluciones.pdf.
 
-📁 Folder: `Exercises/Punto_1`  
-🧠 Techniques: image differencing, segmentation, pixel-wise analysis.
-
----
-
-### 🔷 Exercise 2: Cream Detection in Sandwich Cookies
-
-A quality control system is implemented to verify whether sandwich cookies have adequate and correctly placed cream.  
-The algorithm distinguishes between **correctly filled cookies** (“Bueno”) and **defective ones** (“Incorrecto”).
-
-📁 Folder: `Exercises/Punto_2`  
-📄 Contains grayscale infrared images and Python scripts like `Punto_2_1.py`, `Punto_2_2.py`, and `rgb.py`.
-
-🧠 Techniques: binarization, contour detection, area filtering.
-
----
-
-### 🔷 Exercise 3: Vehicle Infraction - Plate and Speed Estimation
-
-A security camera captures a taxi committing an infraction.  
-The task involves extracting the **license plate number**, despite motion blur, and estimating the **vehicle's speed** at the time of the capture.
-
-📁 Folder: `Exercises/Punto_3`  
-🧠 Techniques: motion blur estimation, OCR (Optical Character Recognition), image processing.
-
----
-
-📄 All supporting documentation, algorithms, and implementation details are provided in [`Exercises/Soluciones.pdf`](./Exercises/Soluciones.pdf).
-
----
-
-## 🎥 Visual Example
-
+🎥 Visual Example
 <!-- Replace with an actual sample -->
-![Detection Example](docs/ejemplo_deteccion.gif)
 
----
 
-## 🧪 Key Features
+🧪 Key Features
+🔍 Multi-class detection: ripe, unripe, overripe, rotten, peduncled fruits
 
-- 🔍 Multi-class detection: ripe, unripe, overripe, rotten, peduncled fruits
-- 🚀 YOLOv8 model trained on real data
-- 📦 Custom dataset from industrial video footage
-- 🎥 Real-time inference from IP camera feed
-- ⚙️ Complete workflow: data acquisition, training, and deployment
+🚀 YOLOv8 model trained on real data
 
----
+📦 Custom dataset from industrial video footage
 
-## 📁 Repository Structure
+🎥 Real-time inference from IP camera feed
+
+⚙️ Complete workflow: data acquisition, training, and deployment
 
