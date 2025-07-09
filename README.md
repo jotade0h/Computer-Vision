@@ -1,4 +1,4 @@
-![Gas Detection Example](Computer-Vision/Data/Exercises-Images/diferencia-ndvi-2025-2017.png)
+![NDVI differences](Computer-Vision/Data/Exercises-Images/diferencia-ndvi-2025-2017.png)
 
 
 🚆 Infrastructure and Trackside Object Detection using YOLOv8
@@ -113,17 +113,87 @@ The task involves estimating the vehicle’s speed and extracting the license pl
 📄 Full documentation, algorithms, and explanation of each approach can be found in Exercises/Soluciones.pdf.
 
 🎥 Visual Example
-<!-- Replace with an actual sample -->
 
 
-🧪 Key Features
-🔍 Multi-class detection: ripe, unripe, overripe, rotten, peduncled fruits
 
-🚀 YOLOv8 model trained on real data
 
-📦 Custom dataset from industrial video footage
 
-🎥 Real-time inference from IP camera feed
 
-⚙️ Complete workflow: data acquisition, training, and deployment
+
+
+
+
+🌿 NDVI Change Detection in Venice (2017–2025)
+This exercise analyzes the Normalized Difference Vegetation Index (NDVI) variation in the Venice region between 2017 and 2025, based on remote sensing data from the Sentinel-2 satellite.
+
+The main objective is to detect vegetation change patterns over time, which can support environmental monitoring, land-use studies, or urban expansion analysis.
+
+🛰️ Data & Implementation
+📥 Satellite source: Sentinel-2 (Copernicus Open Access Hub)
+
+📁 Algorithms and processing scripts: Exercises/NDVI-Venice-remote-sensing-2017-2025
+
+🖼️ Processed NDVI maps and difference visualizations: Results/NDVI
+
+
+
+
+
+---
+
+📹 Real-Time Object Detection from DVR (Netgear RTSP)
+This exercise, located in Exercises/Netgear, demonstrates how to stream video in real time from a Netgear DVR using the RTSP protocol and apply object detection using YOLOv8 from Ultralytics.
+
+The goal is to create a lightweight real-time monitoring system capable of detecting:
+
+🚶‍♂️ People
+
+🚗 Cars
+
+🏍️ Motorcycles
+
+🧠 Main Features
+📡 Real-time RTSP video stream capture via OpenCV
+
+🧠 YOLOv8-based inference for common object classes
+
+🗂️ Organized structure for video capture, detection, and output logging
+
+📸 Screenshots or logs saved when detections occur (optional)
+
+⚙️ Detection zones or event-based triggering can be added
+
+📁 Resources
+💻 Implementation scripts: Exercises/Netgear
+
+🖼️ Detection result images and logs: Results/Netgear
+
+---
+
+🔢 Real-Time Object Counting via RTSP Stream
+This exercise, located in Exercises/Count_objects, implements a real-time object counting system using YOLO (Ultralytics) on live video streams accessed via RTSP.
+
+It allows users to define counting zones by drawing virtual lines or regions of interest (ROIs), and tracks objects (e.g., people or vehicles) crossing those lines.
+
+🎯 Objective
+Detect and count objects crossing a defined line or area
+
+Monitor traffic or pedestrian flow using live DVR streams
+
+🧠 Features
+🎥 RTSP stream input from DVR or IP camera
+
+🧠 YOLOv8 object detection with customizable class filtering
+
+📏 Counting logic based on object movement across a defined line
+
+📝 Real-time display with total counts, optionally saved to logs
+
+🔄 Works for both bidirectional and unidirectional flow
+
+📁 Resources
+🧪 Scripts and configuration: Exercises/Count_objects
+
+📸 Example output frames and logs: Results/Count_objects
+
 
