@@ -39,8 +39,13 @@ Some of the output results, including processed images and logs, are available i
 
 📹 The initial video used for detection can be accessed via [Train data](https://drive.google.com/drive/folders/1i5TJLNIc1vxJCL3xFUoFQQioZUAogb6o?usp=sharing).
 
-<img src="https://github.com/jotade0h/Computer-Vision/blob/main/Results/Segmentacion1.gif" alt="Train movement" width="600"/>
-<img src="https://github.com/jotade0h/Computer-Vision/blob/main/Results/Segmentacion2.gif" alt="Train movement" width="600"/>
+<img src="https://raw.githubusercontent.com/jotade0h/Computer-Vision/main/Results/Trains/Segmentacion1.gif" alt="Train movement" width="600"/>
+
+
+📽️ [Ver Segmentación del tren (video MP4)](https://github.com/jotade0h/Computer-Vision/blob/main/Results/Trains/Segmentacion2.mp4)
+
+
+
 
 
   
