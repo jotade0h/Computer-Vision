@@ -42,7 +42,7 @@ Some of the output results, including processed images and logs, are available i
 <img src="https://raw.githubusercontent.com/jotade0h/Computer-Vision/main/Results/Trains/Segmentacion1.gif" alt="Train movement" width="600"/>
 
 
-📽️ [Ver Segmentación del tren (video MP4)](https://github.com/jotade0h/Computer-Vision/blob/main/Results/Trains/Segmentacion2.mp4)
+📽️ [Ver Segmentación del tren (video MP4)](https://drive.google.com/file/d/1M9AUG_d7nVZDJnljuV3qE6jRlCc7GPMV/view?usp=drive_link)
 
 
 
